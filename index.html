@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Online Exam</h1>
+        <form id="examForm" onsubmit="return submitForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <h2>Questions</h2>
+            
+            <div class="question">
+                <p>1. What is the capital of France?</p>
+                <input type="radio" id="paris" name="q1" value="Paris" required>
+                <label for="paris">Paris</label><br>
+                <input type="radio" id="london" name="q1" value="London">
+                <label for="london">London</label><br>
+                <input type="radio" id="berlin" name="q1" value="Berlin">
+                <label for="berlin">Berlin</label>
+            </div>
+
+            <div class="question">
+                <p>2. Which of the following is a programming language?</p>
+                <input type="radio" id="python" name="q2" value="Python" required>
+                <label for="python">Python</label><br>
+                <input type="radio" id="html" name="q2" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="q2" value="CSS">
+                <label for="css">CSS</label>
+            </div>
+
+            <input type="submit" value="Submit Exam">
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="node.js"></script>
+</body>
+</html>
